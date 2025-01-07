@@ -1,0 +1,57 @@
+.education_hero {
+	direction: rtl;
+	padding: 230px 130px 130px 130px;
+}
+
+.education {
+	background-color: #383838;
+	padding: 50px 130px;
+}
+.education h2 {
+	width: 50%;
+}
+
+/* EXPERIENCE */
+
+.experience_hero {
+	padding: 230px 130px 130px 130px;
+}
+
+/* GAMEDEV */
+
+.gameDev_hero {
+	padding: 230px 130px 130px 130px;
+}
+
+/* HOBBIES */
+
+.hobbies_hero {
+	direction: rtl;
+	padding: 230px 130px 130px 130px;
+}
+@media (max-width: 1100px) {
+	.hobbies_hero {
+		padding: 230px 0px 130px 0px;
+		justify-content: center;
+		direction: unset;
+		text-align: center; /* padding: 130px 130px 130px 130px; */
+	}
+	.gameDev_hero {
+		padding: 230px 0px 130px 0px;
+		justify-content: center;
+		direction: unset;
+		text-align: center; /* padding: 130px 130px 130px 130px; */
+	}
+	.experience_hero {
+		padding: 230px 0px 130px 0px;
+		justify-content: center;
+		direction: unset;
+		text-align: center; /* padding: 130px 130px 130px 130px; */
+	}
+	.education_hero {
+		padding: 230px 0px 130px 0px;
+		justify-content: center;
+		direction: unset;
+		text-align: center; /* padding: 130px 130px 130px 130px; */
+	}
+}
