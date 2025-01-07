@@ -1,9 +1,7 @@
-import Image from "next/image";
+
 import "react-tooltip/dist/react-tooltip.css";
 import styles from "/src/styles/page.module.css";
-import subpagess from "/src/styles/specific-styles.module.css";
-import React, { useState } from "react";
-import { Tooltip } from "react-tooltip";
+import React from "react";
 
 export default function Home_Hero() {
 	return (

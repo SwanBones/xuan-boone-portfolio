@@ -1,13 +1,12 @@
-import Image from "next/image";
+
 import styles from "/src/styles/page.module.css";
-import subpagess from "/src/styles/specific-styles.module.css";
 
 export default function Home_Hobbies() {
 	return (
 		<div className={styles.home_hobbies}>
 			<h2>Hobbies</h2>
 			<p>
-				Xuân's hobbies covers a vast range of digidal arts, giving him a unique
+				Xuân&apos;s hobbies covers a vast range of digidal arts, giving him a unique
 				basis for his works
 			</p>
 			<p>

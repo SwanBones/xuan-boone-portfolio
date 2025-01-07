@@ -1,6 +1,4 @@
-import Image from "next/image";
 import styles from "/src/styles/page.module.css";
-import subpagess from "/src/styles/specific-styles.module.css";
 
 export default function Home_WebDev() {
 	return (

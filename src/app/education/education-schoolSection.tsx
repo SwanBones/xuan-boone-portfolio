@@ -1,5 +1,4 @@
-import Image from "next/image";
-import styles from "/src/styles/page.module.css";
+
 import subPageStyles from "/src/styles/subpages-styles.module.css";
 
 type Props = {
@@ -11,7 +10,7 @@ type Props = {
 };
 
 export default function Education_SchoolSection(props: Props) {
-	const { title, description, date, imageSrc, rtl } = props;
+	const { title, description, date, rtl } = props;
 
 	return (
 		<div

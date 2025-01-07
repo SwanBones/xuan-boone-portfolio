@@ -1,9 +1,10 @@
 "use client";
 import styles from "../styles/page.module.css";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Tooltip } from "react-tooltip";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Navbar() {
 	const pathname = usePathname();
@@ -11,7 +12,7 @@ export default function Navbar() {
 	return (
 		<div className={styles.navbar_container}>
 			<nav className={styles.navbar}>
-				<a href="/">
+			<Link href="/">
 					<Image
 						aria-hidden
 						src={"/logo.png"}
@@ -19,16 +20,15 @@ export default function Navbar() {
 						width={119}
 						height={50}
 					/>
-				</a>
+				
+			 </Link>
 				<div>
 					<ul className={styles.ctas}>
-						<li>
-							<a
-								className={pathname == "/" ? styles.primary : styles.secondary}
+						<li><Link className={pathname == "/" ? styles.primary : styles.secondary}
 								href="/"
 							>
 								Home
-							</a>
+							</ Link>
 						</li>
 						<li>
 							<a
