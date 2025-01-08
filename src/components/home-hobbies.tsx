@@ -6,13 +6,14 @@ export default function Home_Hobbies() {
 		<div className={styles.home_hobbies}>
 			<h2>Hobbies</h2>
 			<p>
-				Xuân&apos;s hobbies covers a vast range of digidal arts, giving him a unique
+				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a unique
 				basis for his works
 			</p>
 			<p>
 				Web and game development aside, he masters photography, cinematography,
-				drawing, digital painting, music, sound design, and 3d animation // gsap
-				scroll here
+				drawing, digital painting, music, sound design, and 3d animation
+				{/* // gsap
+				scroll here */}
 			</p>
 			<div className={styles.ctas}>
 				<a

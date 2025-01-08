@@ -52,12 +52,12 @@ export default function Navbar() {
 						</li>
 						<li>
 							<a
-								href="/hobbies"
+								href="/art"
 								className={
-									pathname == "/hobbies" ? styles.primary : styles.secondary
+									pathname == "/art" ? styles.primary : styles.secondary
 								}
 							>
-								Hobbies
+								Art
 							</a>
 						</li>
 					</ul>
