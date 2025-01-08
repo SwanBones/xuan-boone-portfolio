@@ -147,6 +147,8 @@ a.secondary {
 	position: fixed;
 	width: 100%;
 	top: 0px;
+	display: flex;
+	justify-content: center;
 	height: 150px;
 }
 .navbar {
@@ -157,11 +159,12 @@ a.secondary {
 	z-index: 1000;
 	top: 0px;
 	width: 93%;
+
 	display: grid;
 	grid-template-columns: 150px 1fr;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 3em;
+
 	padding: 25px 32px;
 }
 .navbar div {
