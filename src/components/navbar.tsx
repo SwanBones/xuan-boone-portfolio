@@ -1,18 +1,75 @@
 "use client";
 import styles from "../styles/page.module.css";
+import subpageStyles from "../styles/subpages-styles.module.css";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Tooltip } from "react-tooltip";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Navbar() {
+	const firstText = useRef(null);
+	const secondText = useRef(null);
+	const slider = useRef(null);
 	const pathname = usePathname();
+	let xPercent = 0;
+	let direction = 1;
+	const step = 0.02;
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		requestAnimationFrame(animation);
 
+		gsap.to(slider.current, {
+			scrollTrigger: {
+				trigger: document.documentElement,
+				start: 0,
+				end: window.innerHeight,
+				scrub: true,
+				onUpdate: (e) => {
+					direction = e.direction * -1;
+				},
+			},
+			x: "-=300px",
+		});
+	}, []);
+
+	gsap.to(slider.current, {
+		scrollTrigger: {
+			trigger: document.getElementsByClassName(styles.home_gameDev)[0],
+			start: 0,
+			end: 30,
+			scrub: true,
+		},
+		x: "-=300px",
+		color: "red",
+	});
+
+	gsap.to(slider.current, {
+		scrollTrigger: styles.home_gameDev,
+		duration: 1,
+		y: "300px",
+		backgroundColor: "blue",
+	});
+
+	const animation = () => {
+		gsap.set(firstText.current, { xPercent: xPercent });
+		gsap.set(secondText.current, { xPercent: xPercent });
+		xPercent += step * direction;
+		console.log(xPercent);
+		if (xPercent < -100) {
+			xPercent = 0;
+		}
+		if (xPercent > 0) {
+			xPercent = -100;
+		}
+		requestAnimationFrame(animation);
+	};
 	return (
 		<div className={styles.navbar_container}>
 			<nav className={styles.navbar}>
-			<Link href="/">
+				<Link href="/">
 					<Image
 						aria-hidden
 						src={"/logo.png"}
@@ -20,15 +77,16 @@ export default function Navbar() {
 						width={119}
 						height={50}
 					/>
-				
-			 </Link>
+				</Link>
 				<div>
 					<ul className={styles.ctas}>
-						<li><Link className={pathname == "/" ? styles.primary : styles.secondary}
+						<li>
+							<Link
+								className={pathname == "/" ? styles.primary : styles.secondary}
 								href="/"
 							>
 								Home
-							</ Link>
+							</Link>
 						</li>
 						<li>
 							<a
@@ -171,6 +229,24 @@ export default function Navbar() {
 					/>
 				</div>
 			</nav>
+			<div className={subpageStyles.slider_container}>
+				<div className={subpageStyles.slider} ref={slider}>
+					<p ref={firstText}>
+						Website made using Typescript, React.js, and Next.js, hosted on
+						Firebase, DNS: SquareSpace. Animations made using GSAP. Created
+						using Visual Studio Code. Design inspired by modern web standards
+						and optimized for performance and accessibility. Continuous
+						integration and deployment from GitHub.
+					</p>
+					<p ref={secondText}>
+						Website made using Typescript, React.js, and Next.js, hosted on
+						Firebase, DNS: SquareSpace. Animations made using GSAP. Created
+						using Visual Studio Code. Design inspired by modern web standards
+						and optimized for performance and accessibility. Continuous
+						integration and deployment from GitHub.
+					</p>
+				</div>
+			</div>
 		</div>
 	);
 }
