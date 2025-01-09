@@ -1,4 +1,3 @@
-
 import styles from "/src/styles/page.module.css";
 
 export default function Home_GameDev() {

@@ -16,10 +16,21 @@ export default function Navbar() {
 	const pathname = usePathname();
 	let xPercent = 0;
 	let direction = 1;
-	const step = 0.02;
+	const step = 0.01;
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		requestAnimationFrame(animation);
+		if (pathname == "/") {
+			requestAnimationFrame(animation);
+			gsap.to(slider.current, {
+				scrollTrigger: {
+					trigger: "home_education",
+					start: "top top",
+					scrub: 1,
+					end: "+=700",
+				},
+				opacity: 0,
+			});
+		}
 
 		gsap.to(slider.current, {
 			scrollTrigger: {
@@ -31,33 +42,24 @@ export default function Navbar() {
 					direction = e.direction * -1;
 				},
 			},
-			x: "-=300px",
 		});
 	}, []);
 
-	gsap.to(slider.current, {
-		scrollTrigger: {
-			trigger: document.getElementsByClassName(styles.home_gameDev)[0],
-			start: 0,
-			end: 30,
-			scrub: true,
-		},
-		x: "-=300px",
-		color: "red",
-	});
-
-	gsap.to(slider.current, {
-		scrollTrigger: styles.home_gameDev,
-		duration: 1,
-		y: "300px",
-		backgroundColor: "blue",
-	});
+	// gsap.to(slider.current, {
+	// 	scrollTrigger: {
+	// 		trigger: document.getElementsByClassName(styles.home_gameDev)[0],
+	// 		start: 0,
+	// 		end: 30,
+	// 		scrub: true,
+	// 	},
+	// 	x: "-=300px",
+	// 	color: "red",
+	// });
 
 	const animation = () => {
 		gsap.set(firstText.current, { xPercent: xPercent });
 		gsap.set(secondText.current, { xPercent: xPercent });
 		xPercent += step * direction;
-		console.log(xPercent);
 		if (xPercent < -100) {
 			xPercent = 0;
 		}
@@ -106,6 +108,17 @@ export default function Navbar() {
 								href="/experience"
 							>
 								Experience
+							</a>
+						</li>
+						<li>•</li>
+						<li>
+							<a
+								href="/projects"
+								className={
+									pathname == "/projects" ? styles.primary : styles.secondary
+								}
+							>
+								Projects
 							</a>
 						</li>
 						<li>
@@ -229,24 +242,26 @@ export default function Navbar() {
 					/>
 				</div>
 			</nav>
-			<div className={subpageStyles.slider_container}>
-				<div className={subpageStyles.slider} ref={slider}>
-					<p ref={firstText}>
-						Website made using Typescript, React.js, and Next.js, hosted on
-						Firebase, DNS: SquareSpace. Animations made using GSAP. Created
-						using Visual Studio Code. Design inspired by modern web standards
-						and optimized for performance and accessibility. Continuous
-						integration and deployment from GitHub.
-					</p>
-					<p ref={secondText}>
-						Website made using Typescript, React.js, and Next.js, hosted on
-						Firebase, DNS: SquareSpace. Animations made using GSAP. Created
-						using Visual Studio Code. Design inspired by modern web standards
-						and optimized for performance and accessibility. Continuous
-						integration and deployment from GitHub.
-					</p>
+			{pathname == "/" && (
+				<div className={subpageStyles.slider_container}>
+					<div className={subpageStyles.slider} ref={slider}>
+						<p ref={firstText}>
+							Website made using Typescript, React.js, and Next.js, hosted on
+							Firebase, Domain: SquareSpace. Animations made using GSAP. Created
+							using Visual Studio Code, design inspired by modern web standards
+							and optimized for performance and accessibility. Continuous
+							deployment from GitHub.
+						</p>
+						<p ref={secondText}>
+							Website made using Typescript, React.js, and Next.js, hosted on
+							Firebase, Domain: SquareSpace. Animations made using GSAP. Created
+							using Visual Studio Code, design inspired by modern web standards
+							and optimized for performance and accessibility. Continuous
+							deployment from GitHub.
+						</p>
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	);
 }

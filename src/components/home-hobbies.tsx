@@ -1,4 +1,3 @@
-
 import styles from "/src/styles/page.module.css";
 
 export default function Home_Hobbies() {
@@ -6,8 +5,8 @@ export default function Home_Hobbies() {
 		<div className={styles.home_hobbies}>
 			<h2>Hobbies</h2>
 			<p>
-				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a unique
-				basis for his works
+				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a
+				unique basis for his works
 			</p>
 			<p>
 				Web and game development aside, he masters photography, cinematography,
@@ -16,11 +15,7 @@ export default function Home_Hobbies() {
 				scroll here */}
 			</p>
 			<div className={styles.ctas}>
-				<a
-					className={styles.secondary}
-					href="/hobbies"
-					rel="noopener noreferrer"
-				>
+				<a className={styles.secondary} href="/art" rel="noopener noreferrer">
 					Let me take you into my world
 				</a>
 			</div>

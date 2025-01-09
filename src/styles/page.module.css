@@ -90,6 +90,9 @@
 	line-height: 20px;
 	font-weight: 500;
 }
+.ctas_icon {
+	width: max-content;
+}
 .ctas_icon a {
 	appearance: none;
 	border-radius: 128px;
@@ -102,7 +105,7 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	width: max-content;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 500;
@@ -206,6 +209,35 @@ a.secondary {
 	border-radius: 1em;
 	border-style: solid;
 }
+
+.about_container {
+	max-width: 600px;
+	height: 12em;
+	overflow: hidden;
+}
+.about {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	top: -12em;
+	offset-anchor: 0%;
+}
+.about p {
+	margin-top: 2em;
+}
+@media (max-height: 1020px) and (max-width: 1411px) {
+	.about {
+		display: none;
+	}
+}
+@media (max-height: 850px) and (min-width: 1411px) {
+	.about {
+		display: none;
+	}
+}
 .video_bg {
 	position: absolute;
 	object-fit: contain;
@@ -218,28 +250,35 @@ a.secondary {
 /*HERO SECTION*/
 .home_hero {
 	padding: 350px 130px 100px 130px;
-	/* background-color: linear-gradient(#000, rgba(0, 0, 0, 1)); */
 	background-color: rgba(0, 0, 0, 0.8);
-
 	overflow: hidden;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	justify-items: center;
 	text-align: center;
 }
+/*EDUCATION SECTION*/
+.home_education {
+	background-color: #000;
+
+	padding: 130px;
+}
 
 /*WEB DEV SECTION*/
 .home_webDev {
-	background-color: #000;
+	background-color: #0a0a0a;
 	direction: rtl;
 	padding: 130px;
 }
 .home_gameDev {
+	background-color: #000;
 	padding: 130px;
 }
 .home_hobbies {
-	background-color: #000;
+	background-color: #0a0a0a;
 
 	direction: rtl;
 	padding: 130px;
