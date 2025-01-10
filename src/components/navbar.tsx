@@ -83,7 +83,7 @@ export default function Navbar() {
 					<Link href="/" className={styles.navbar_logo}>
 						<Image
 							aria-hidden
-							src={"/logo.png"}
+							src={"/images/logo.png"}
 							alt={""}
 							width={119}
 							height={50}
