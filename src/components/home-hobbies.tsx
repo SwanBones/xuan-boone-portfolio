@@ -2,7 +2,7 @@ import styles from "/src/styles/page.module.css";
 
 export default function Home_Hobbies() {
 	return (
-		<div className={styles.home_hobbies}>
+		<div className={styles.home_hobbies} id="home_hobbies">
 			<h2>Hobbies</h2>
 			<p>
 				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a
@@ -14,9 +14,9 @@ export default function Home_Hobbies() {
 				{/* // gsap
 				scroll here */}
 			</p>
-			<div className={styles.ctas}>
+			<div className={styles.ctas} style={{ justifyContent: "flex-end" }}>
 				<a className={styles.secondary} href="/art" rel="noopener noreferrer">
-					Let me take you into my world
+					Check them out!
 				</a>
 			</div>
 		</div>

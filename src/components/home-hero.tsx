@@ -82,7 +82,7 @@ export default function Home_Hero() {
 	return (
 		<div className={styles.home_hero}>
 			<video autoPlay muted loop className={styles.video_bg}>
-				<source src="banner.mp4" type="video/mp4" />
+				<source src="videos/banner.mp4" type="video/mp4" />
 			</video>
 			<div
 				style={{
@@ -140,7 +140,7 @@ export default function Home_Hero() {
 						Born in Versailles, France, I was lucky enough to have lived most of
 						my life in Asia. My passions for computer development and various
 						arts, my studies and my professional experiences have confirmed my
-						choice to move towards software development. Thank you for your time
+						choice to move towards software development. Thank you for the time
 						you are taking to explore my portfolio.
 					</p>
 					<div className={styles.ctas}>
@@ -181,7 +181,7 @@ export default function Home_Hero() {
 					}}
 				>
 					<Image
-						src={"arrow-double-down.svg"}
+						src={"vector/arrow-double-down.svg"}
 						alt={""}
 						width={20}
 						height={20}

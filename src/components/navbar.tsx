@@ -143,7 +143,7 @@ export default function Navbar() {
 								data-tooltip-content="YouTube Channel"
 							>
 								<Image
-									src={"/youtube.svg"}
+									src={"/vector/youtube.svg"}
 									alt={"YouTube"}
 									height={"20"}
 									width={"20"}
@@ -159,7 +159,7 @@ export default function Navbar() {
 								data-tooltip-content="Spotify Artist Page"
 							>
 								<Image
-									src={"/spotify.svg"}
+									src={"/vector/spotify.svg"}
 									alt={"Spotify"}
 									height={"20"}
 									width={"20"}
@@ -175,7 +175,7 @@ export default function Navbar() {
 								data-tooltip-content="Artstation Portfolio"
 							>
 								<Image
-									src={"/artstation.svg"}
+									src={"/vector/artstation.svg"}
 									alt={"Artstation"}
 									height={"20"}
 									width={"20"}
@@ -191,7 +191,7 @@ export default function Navbar() {
 								data-tooltip-content="GitHub Profile"
 							>
 								<Image
-									src={"/github.svg"}
+									src={"/vector/github.svg"}
 									alt={"Github"}
 									height={"20"}
 									width={"20"}
@@ -207,7 +207,7 @@ export default function Navbar() {
 								data-tooltip-content="Itch.io Page"
 							>
 								<Image
-									src={"/itchio.svg"}
+									src={"/vector/itchio.svg"}
 									alt={"Itch.io"}
 									height={"20"}
 									width={"20"}
@@ -223,7 +223,7 @@ export default function Navbar() {
 								data-tooltip-content="LinkedIn"
 							>
 								<Image
-									src={"/linkedin.svg"}
+									src={"/vector/linkedin.svg"}
 									alt={"LinkedIn"}
 									height={"20"}
 									width={"20"}

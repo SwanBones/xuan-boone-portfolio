@@ -4,12 +4,24 @@
 }
 
 .education {
-	background-color: #000;
 	padding: 50px 130px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
-.education h2 {
-	width: 50%;
+
+.company {
+	padding: 50px 130px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 }
+@media (min-width: 1190px) {
+	.education h2 {
+		width: 50%;
+	}
+}
+
 .slider_container {
 	width: 93%;
 	position: absolute;
@@ -50,6 +62,7 @@
 	direction: rtl;
 	padding: 230px 130px 130px 130px;
 }
+
 @media (max-width: 1100px) {
 	.slider_container {
 		position: fixed;

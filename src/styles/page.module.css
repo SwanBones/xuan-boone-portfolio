@@ -209,7 +209,13 @@ a.secondary {
 	border-radius: 1em;
 	border-style: solid;
 }
-
+#wave_svg {
+	background-color: red;
+	margin: 0;
+	height: 0;
+	position: "relative";
+	transform: translateX(25%);
+}
 .about_container {
 	max-width: 600px;
 	height: 12em;
@@ -263,24 +269,43 @@ a.secondary {
 /*EDUCATION SECTION*/
 .home_education {
 	background-color: #000;
-
+	background-image: url("../../public/images/utt.png");
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
 	padding: 130px;
 }
 
 /*WEB DEV SECTION*/
 .home_webDev {
 	background-color: #0a0a0a;
+	background-image: url("../../public/images/webdev.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	direction: rtl;
 	padding: 130px;
 }
 .home_gameDev {
 	background-color: #000;
+	background-image: url("../../public/images/gamedev.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 130px;
 }
 .home_hobbies {
 	background-color: #0a0a0a;
+	background-image: url("../../public/images/biplane.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: right;
+	padding: 130px;
+}
 
-	direction: rtl;
+.under_construction {
 	padding: 130px;
 }
 
