@@ -1,7 +1,7 @@
-import Image from "next/image";
 import styles from "../styles/page.module.css";
 
 export default function Footer() {
+	const date = new Date();
 	return (
 		<footer className={styles.footer}>
 			<a
@@ -9,15 +9,10 @@ export default function Footer() {
 				target="_blank"
 				rel="noopener noreferrer"
 			>
-				<Image
-					aria-hidden
-					src="/vector/file.svg"
-					alt="File icon"
-					width={16}
-					height={16}
-				/>
 				Contact me
 			</a>
+
+			<p>© {date.getFullYear()} Xuân Boone - All rights reserved.</p>
 			<a href="https://www.flaticon.com/uicons" target="_blank">
 				Uicons by Flaticon
 			</a>

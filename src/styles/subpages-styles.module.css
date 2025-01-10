@@ -16,6 +16,13 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+.project {
+	padding: 130px 130px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 @media (min-width: 1190px) {
 	.education h2 {
 		width: 50%;

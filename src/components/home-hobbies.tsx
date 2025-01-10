@@ -5,11 +5,11 @@ export default function Home_Hobbies() {
 		<div className={styles.home_hobbies} id="home_hobbies">
 			<h2>Hobbies</h2>
 			<p>
-				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a
-				unique basis for his works
+				My hobbies cover a vast range of digital arts, giving me a unique basis
+				for any type of work
 			</p>
 			<p>
-				Web and game development aside, he masters photography, cinematography,
+				Web and game development aside, I enjoy photography, cinematography,
 				drawing, digital painting, music, sound design, and 3d animation
 				{/* // gsap
 				scroll here */}

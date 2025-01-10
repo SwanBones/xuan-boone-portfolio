@@ -46,37 +46,29 @@ export default function Home_Hero() {
 						{ opacity: 0, letterSpacing: "-10px", ease: "steps(1)" },
 					],
 				},
-				"<" // Play simultaneously with the previous animation
+				"<"
 			)
 
-			.to(
-				title.current,
-				{
-					duration: 0.4,
-					keyframes: [
-						{ letterSpacing: "-1px", fontSize: "12em", ease: "steps(1)" },
-						{ opacity: 100, letterSpacing: "-10px", ease: "steps(1)" },
-						{ letterSpacing: "-0.5px", ease: "steps(1)" },
-						{ letterSpacing: "-0.9px", fontSize: "11em", ease: "steps(1)" },
+			.to(title.current, {
+				duration: 0.4,
+				keyframes: [
+					{ letterSpacing: "-1px", fontSize: "12em", ease: "steps(1)" },
+					{ opacity: 100, letterSpacing: "-10px", ease: "steps(1)" },
+					{ letterSpacing: "-0.5px", ease: "steps(1)" },
+					{ letterSpacing: "-0.9px", fontSize: "11em", ease: "steps(1)" },
 
-						{ letterSpacing: "-0px", ease: "steps(1)" },
-					],
-				}
-				// Play simultaneously with the previous animation
-			)
-			.to(
-				description.current,
-				{
-					duration: 0.2,
-					keyframes: [
-						{ backgroundColor: "white", ease: "steps(1)" },
-						{ backgroundColor: "transparent", ease: "steps(1)" },
-						{ backgroundColor: "white", color: "white", ease: "steps(1)" },
-						{ backgroundColor: "transparent", ease: "steps(1)" },
-					],
-				}
-				// Play simultaneously with the previous animation
-			);
+					{ letterSpacing: "-0px", ease: "steps(1)" },
+				],
+			})
+			.to(description.current, {
+				duration: 0.2,
+				keyframes: [
+					{ backgroundColor: "white", ease: "steps(1)" },
+					{ backgroundColor: "transparent", ease: "steps(1)" },
+					{ backgroundColor: "white", color: "white", ease: "steps(1)" },
+					{ backgroundColor: "transparent", ease: "steps(1)" },
+				],
+			});
 	}, []);
 
 	return (
@@ -87,9 +79,9 @@ export default function Home_Hero() {
 			<div
 				style={{
 					display: "inline-block",
-					padding: 0 /* Remove padding for tight fit */,
+					padding: 0,
 					marginBottom: "-2em",
-					position: "relative", // Add relative positioning to parent
+					position: "relative",
 				}}
 			>
 				<div
@@ -108,12 +100,9 @@ export default function Home_Hero() {
 			</div>
 
 			<p style={{ color: "transparent" }} ref={description}>
-				{/* Étudiant en dernière année d’Ingénieur en Informatique et Systèmes
-				d'Information À l’UTT */}
 				Final year student in Computer Science and Information Systems
 				Engineering at UTT
 			</p>
-			{/* <p>Actuellement en recherche de stage | Stage de fin d’études</p> */}
 			<div className={styles.about_container}>
 				<div className={styles.about} ref={about}>
 					<div className={styles.ctas}>

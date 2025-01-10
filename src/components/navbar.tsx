@@ -18,20 +18,30 @@ export default function Navbar() {
 	let xPercent = 0;
 	let direction = 1;
 	const step = 0.01;
+
 	useEffect(() => {
 		gsap.registerPlugin(ScrollTrigger);
-		if (pathname == "/") {
-			requestAnimationFrame(animation);
-			gsap.to(slider.current, {
-				scrollTrigger: {
-					trigger: "home_education",
-					start: "top top",
-					scrub: 1,
-					end: "+=700",
-				},
-				opacity: 0,
-			});
-		}
+		// if (pathname == "/") {
+		requestAnimationFrame(animation);
+		gsap.to(slider.current, {
+			scrollTrigger: {
+				trigger: "home_education",
+				start: "top top",
+				scrub: 1,
+				end: "+=700",
+			},
+			opacity: 0,
+		});
+		gsap.to("#navbarContainer", {
+			scrollTrigger: {
+				trigger: "home_education",
+				start: "top top",
+				scrub: 1,
+				end: "+=700",
+			},
+			paddingBottom: "20px",
+		});
+		// }
 
 		gsap.to(slider.current, {
 			scrollTrigger: {
@@ -78,7 +88,7 @@ export default function Navbar() {
 	return (
 		<div>
 			<Sidebar />
-			<div className={styles.navbar_container}>
+			<div className={styles.navbar_container} id="navbarContainer">
 				<nav className={styles.navbar}>
 					<Link href="/" className={styles.navbar_logo}>
 						<Image
@@ -251,7 +261,7 @@ export default function Navbar() {
 							disableStyleInjection
 							opacity={1}
 							className={styles.icon_tooltip}
-							offset={40}
+							offset={65}
 						/>
 					</div>
 
@@ -269,26 +279,24 @@ export default function Navbar() {
 						</a>
 					</div>
 				</nav>
-				{pathname == "/" && (
-					<div className={subpageStyles.slider_container}>
-						<div className={subpageStyles.slider} ref={slider}>
-							<p ref={firstText}>
-								Website made using Typescript, React.js, and Next.js, hosted on
-								Firebase, Domain: SquareSpace. Animations made using GSAP.
-								Created using Visual Studio Code, design inspired by modern web
-								standards and optimized for performance and accessibility.
-								Continuous deployment from GitHub.
-							</p>
-							<p ref={secondText}>
-								Website made using Typescript, React.js, and Next.js, hosted on
-								Firebase, Domain: SquareSpace. Animations made using GSAP.
-								Created using Visual Studio Code, design inspired by modern web
-								standards and optimized for performance and accessibility.
-								Continuous deployment from GitHub.
-							</p>
-						</div>
+				<div className={subpageStyles.slider_container}>
+					<div className={subpageStyles.slider} ref={slider}>
+						<p ref={firstText}>
+							Website made using Typescript, React.js, and Next.js, hosted on
+							Firebase, Domain: SquareSpace. Animations made using GSAP. Created
+							using Visual Studio Code, design inspired by modern web standards
+							and optimized for performance and accessibility. Continuous
+							deployment from GitHub.
+						</p>
+						<p ref={secondText}>
+							Website made using Typescript, React.js, and Next.js, hosted on
+							Firebase, Domain: SquareSpace. Animations made using GSAP. Created
+							using Visual Studio Code, design inspired by modern web standards
+							and optimized for performance and accessibility. Continuous
+							deployment from GitHub.
+						</p>
 					</div>
-				)}
+				</div>
 			</div>
 		</div>
 	);

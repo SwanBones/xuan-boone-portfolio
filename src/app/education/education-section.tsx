@@ -9,7 +9,7 @@ type Props = {
 	rtl?: boolean;
 };
 
-export default function Education_SchoolSection(props: Props) {
+export default function EducationSection(props: Props) {
 	const { title, description, date, rtl, backgroundImg } = props;
 
 	return (

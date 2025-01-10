@@ -1,7 +1,7 @@
 import styles from "../../styles/page.module.css";
 import Navbar from "../../components/navbar";
 import Education_Hero from "./hero";
-import Education_SchoolSection from "./education-schoolSection";
+import EducationSection from "./education-section";
 import Footer from "@/components/footer";
 
 export default function Education() {
@@ -10,7 +10,7 @@ export default function Education() {
 			<Navbar />
 			<main className={styles.main}>
 				<Education_Hero />
-				<Education_SchoolSection
+				<EducationSection
 					title={"Université du Québec à Chicoutimi"}
 					description={
 						"Computer Science Program for Exchange Students | Video game and Web Development"
@@ -18,7 +18,7 @@ export default function Education() {
 					date={"2024"}
 					backgroundImg={"/images/school_uqac.jpg"}
 				/>
-				<Education_SchoolSection
+				<EducationSection
 					rtl
 					title={"Université de Technologie de Troyes"}
 					description={
@@ -27,7 +27,7 @@ export default function Education() {
 					date={"2020 - 2025 "}
 					backgroundImg={"/images/school_utt.jpg"}
 				/>
-				<Education_SchoolSection
+				<EducationSection
 					title={"Lycée Français de Shanghai"}
 					description={
 						"General Baccalaureate | European section | Scientific Stream - Mathematics specialty, Very Good Honors"

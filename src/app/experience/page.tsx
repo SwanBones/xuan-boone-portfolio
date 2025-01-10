@@ -1,7 +1,7 @@
 import styles from "../../styles/page.module.css";
 import Navbar from "../../components/navbar";
 import Experience_Hero from "./hero";
-import Experience_CompanySection from "./experience-companySection";
+import Experience_CompanySection from "./experience-section";
 import Footer from "@/components/footer";
 
 export default function Experience() {
@@ -15,7 +15,7 @@ export default function Experience() {
 					jobPosition={"Full Stack Development Intern"}
 					date={"2024 | 6 Months"}
 					description={
-						"Full Stack development of a React TypeScript application using Agile / Scrum methodology."
+						"Full Stack development of a React TypeScript application using Agile / Scrum methodology"
 					}
 					backgroundImg={"/images/company_polaris.jpg"}
 				/>
