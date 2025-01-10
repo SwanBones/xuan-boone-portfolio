@@ -1,4 +1,3 @@
-
 import styles from "/src/styles/page.module.css";
 
 export default function Home_GameDev() {
@@ -13,7 +12,7 @@ export default function Home_GameDev() {
 			<div className={styles.ctas}>
 				<a
 					className={styles.secondary}
-					href="/game-dev"
+					href="/projects"
 					rel="noopener noreferrer"
 				>
 					See Projects

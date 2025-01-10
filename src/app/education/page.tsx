@@ -16,6 +16,7 @@ export default function Education() {
 						"Computer Science Program for Exchange Students | Video game and Web Development"
 					}
 					date={"2024"}
+					backgroundImg={"/images/school_uqac.jpg"}
 				/>
 				<Education_SchoolSection
 					rtl
@@ -24,6 +25,7 @@ export default function Education() {
 						"Computer Science and Information Systems Engineering | Software Engineering"
 					}
 					date={"2020 - 2025 "}
+					backgroundImg={"/images/school_utt.jpg"}
 				/>
 				<Education_SchoolSection
 					title={"Lycée Français de Shanghai"}
@@ -31,6 +33,7 @@ export default function Education() {
 						"General Baccalaureate | European section | Scientific Stream - Mathematics specialty, Very Good Honors"
 					}
 					date={"2016 - 2020 "}
+					backgroundImg={"/images/school_shanghai.jpg"}
 				/>
 			</main>
 			<Footer />

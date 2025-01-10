@@ -1,13 +1,12 @@
-
 import styles from "/src/styles/page.module.css";
 
 export default function Home_Hobbies() {
 	return (
-		<div className={styles.home_hobbies}>
+		<div className={styles.home_hobbies} id="home_hobbies">
 			<h2>Hobbies</h2>
 			<p>
-				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a unique
-				basis for his works
+				Xuân&apos;s hobbies covers a vast range of digital arts, giving him a
+				unique basis for his works
 			</p>
 			<p>
 				Web and game development aside, he masters photography, cinematography,
@@ -15,13 +14,9 @@ export default function Home_Hobbies() {
 				{/* // gsap
 				scroll here */}
 			</p>
-			<div className={styles.ctas}>
-				<a
-					className={styles.secondary}
-					href="/hobbies"
-					rel="noopener noreferrer"
-				>
-					Let me take you into my world
+			<div className={styles.ctas} style={{ justifyContent: "flex-end" }}>
+				<a className={styles.secondary} href="/art" rel="noopener noreferrer">
+					Check them out!
 				</a>
 			</div>
 		</div>

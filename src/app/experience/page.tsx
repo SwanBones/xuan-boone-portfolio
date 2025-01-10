@@ -1,7 +1,7 @@
 import styles from "../../styles/page.module.css";
 import Navbar from "../../components/navbar";
 import Experience_Hero from "./hero";
-import Experience_CompanySection from "./education-schoolSection";
+import Experience_CompanySection from "./experience-companySection";
 import Footer from "@/components/footer";
 
 export default function Experience() {
@@ -17,6 +17,7 @@ export default function Experience() {
 					description={
 						"Full Stack development of a React TypeScript application using Agile / Scrum methodology."
 					}
+					backgroundImg={"/images/company_polaris.jpg"}
 				/>
 				<Experience_CompanySection
 					rtl
@@ -25,12 +26,14 @@ export default function Experience() {
 					date={"2023 | 12 Months"}
 					description="Media management and participation in the management of a solidarity and social grocery store aiding students in need
 "
+					backgroundImg={"/images/company_agorae.jpg"}
 				/>
 				<Experience_CompanySection
 					title={"Safran Aircraft Engines "}
 					jobPosition={"Worker intern"}
 					description="Maintenance of tools around the manufacture of aircraft engines"
 					date={"2021 | 1 Month"}
+					backgroundImg={"/images/company_SAE.jpg"}
 				/>
 				<Experience_CompanySection
 					rtl
@@ -38,6 +41,7 @@ export default function Experience() {
 					jobPosition={"Discovery internship"}
 					description="Discovery of how video game development works in business, Introduction to game design"
 					date={"2018 | 1 Week"}
+					backgroundImg={"/images/company_redaccent.jpg"}
 				/>
 			</main>
 			<Footer />

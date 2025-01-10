@@ -90,6 +90,9 @@
 	line-height: 20px;
 	font-weight: 500;
 }
+.ctas_icon {
+	width: max-content;
+}
 .ctas_icon a {
 	appearance: none;
 	border-radius: 128px;
@@ -102,7 +105,7 @@
 	cursor: pointer;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	width: max-content;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 500;
@@ -147,6 +150,8 @@ a.secondary {
 	position: fixed;
 	width: 100%;
 	top: 0px;
+	display: flex;
+	justify-content: center;
 	height: 150px;
 }
 .navbar {
@@ -157,11 +162,12 @@ a.secondary {
 	z-index: 1000;
 	top: 0px;
 	width: 93%;
+
 	display: grid;
 	grid-template-columns: 150px 1fr;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 3em;
+
 	padding: 25px 32px;
 }
 .navbar div {
@@ -203,6 +209,41 @@ a.secondary {
 	border-radius: 1em;
 	border-style: solid;
 }
+#wave_svg {
+	background-color: red;
+	margin: 0;
+	height: 0;
+	position: "relative";
+	transform: translateX(25%);
+}
+.about_container {
+	max-width: 600px;
+	height: 12em;
+	overflow: hidden;
+}
+.about {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	top: -12em;
+	offset-anchor: 0%;
+}
+.about p {
+	margin-top: 2em;
+}
+@media (max-height: 1020px) and (max-width: 1411px) {
+	.about {
+		display: none;
+	}
+}
+@media (max-height: 850px) and (min-width: 1411px) {
+	.about {
+		display: none;
+	}
+}
 .video_bg {
 	position: absolute;
 	object-fit: contain;
@@ -215,30 +256,56 @@ a.secondary {
 /*HERO SECTION*/
 .home_hero {
 	padding: 350px 130px 100px 130px;
-	/* background-color: linear-gradient(#000, rgba(0, 0, 0, 1)); */
 	background-color: rgba(0, 0, 0, 0.8);
-
 	overflow: hidden;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	justify-content: center;
 	justify-items: center;
 	text-align: center;
 }
+/*EDUCATION SECTION*/
+.home_education {
+	background-color: #000;
+	background-image: url("../../public/images/utt.png");
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: center;
+	background-size: cover;
+	padding: 130px;
+}
 
 /*WEB DEV SECTION*/
 .home_webDev {
-	background-color: #000;
+	background-color: #0a0a0a;
+	background-image: url("../../public/images/webdev.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	direction: rtl;
 	padding: 130px;
 }
 .home_gameDev {
+	background-color: #000;
+	background-image: url("../../public/images/gamedev.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	padding: 130px;
 }
 .home_hobbies {
-	background-color: #000;
+	background-color: #0a0a0a;
+	background-image: url("../../public/images/biplane.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: right;
+	padding: 130px;
+}
 
-	direction: rtl;
+.under_construction {
 	padding: 130px;
 }
 

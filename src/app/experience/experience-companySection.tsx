@@ -1,4 +1,3 @@
-
 import subPageStyles from "/src/styles/subpages-styles.module.css";
 
 type Props = {
@@ -6,17 +5,21 @@ type Props = {
 	jobPosition: string;
 	description: string;
 	date: string;
+	backgroundImg: string;
 	imageSrc?: string;
 	rtl?: boolean;
 };
 
 export default function Experience_CompanySection(props: Props) {
-	const { title, jobPosition, description, date, rtl } = props;
+	const { title, jobPosition, description, date, rtl, backgroundImg } = props;
 
 	return (
 		<div
-			className={subPageStyles.education}
-			style={{ direction: rtl ? "rtl" : "ltr" }}
+			className={subPageStyles.company}
+			style={{
+				textAlign: rtl ? "right" : "left",
+				backgroundImage: `url(${backgroundImg})`,
+			}}
 		>
 			<h2>{title}</h2>
 			<h3>{jobPosition}</h3>
