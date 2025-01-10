@@ -145,6 +145,28 @@ a.secondary {
 .footer img {
 	flex-shrink: 0;
 }
+
+#sidebar_burger_button {
+	display: none;
+}
+
+.sidebar {
+	justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	left: 100%;
+	z-index: 1000;
+	top: 0;
+	padding: 0;
+	display: flex;
+	position: fixed;
+
+	height: 100%;
+	background-color: #000;
+	max-width: 400px;
+	width: 400px;
+}
+
 .navbar_container {
 	background: linear-gradient(#000, rgba(0, 0, 0, 0));
 	position: fixed;
@@ -170,7 +192,7 @@ a.secondary {
 
 	padding: 25px 32px;
 }
-.navbar div {
+#desktop_navbar {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;
@@ -331,12 +353,64 @@ a.secondary {
 		text-underline-offset: 4px;
 	}
 }
+@media (max-width: 1100px) and (min-width: 820px) {
+	#desktop_navbar {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		/* padding: 16px 32px; */
+	}
+}
+@media (min-width: 820px) {
+	.sidebar {
+		display: none;
+	}
+}
+@media (max-width: 820px) {
+	.page h1 {
+		font-size: 7em;
+	}
+	.page h2 {
+		font-size: 3em;
+	}
+	#sidebar_burger_button {
+		display: flex;
+	}
+	.sidebar ul {
+		width: 100%;
+		list-style-type: none;
+		align-items: center;
+	}
+	.sidebar_ul {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	.sidebar_icon_ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		text-align: center;
+	}
+	.navbar_logo {
+		display: flex;
+		justify-content: "center";
+	}
+	.navbar {
+		grid-template-columns: 1fr max-content;
+	}
+	#desktop_navbar {
+		display: none;
+		justify-content: space-between;
+		flex-direction: column;
+		/* padding: 16px 32px; */
+	}
 
-@media (max-width: 740) {
-	.page {
+	/* .page {
 		padding: 32px;
 		padding-bottom: 80px;
-	}
+	} */
 
 	.main {
 		align-items: center;
@@ -362,14 +436,7 @@ a.secondary {
 		justify-content: center;
 	}
 }
-@media (max-width: 1100px) {
-	.navbar div {
-		display: flex;
-		justify-content: space-between;
-		flex-direction: column;
-		/* padding: 16px 32px; */
-	}
-}
+
 @media (prefers-color-scheme: dark) {
 	.logo {
 		filter: invert();
